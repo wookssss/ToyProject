@@ -1,1 +1,42 @@
-/* 주석 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  border: 1px solid black;
+}
+
+#wrap {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+#wrap #btn_wrap {
+  width: 1600px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+#btn_wrap {
+  background-color: #fff;
+}
+
+#btn_wrap .timer_box {
+  width: 600px;
+  height: 300px;
+  margin: 0px auto;
+}
+
+.timer_box .start {
+  width: 300px;
+  height: 150px;
+  margin-top: 70px;
+  margin-left: 150px;
+}
+
+#btn_wrap .text_box {
+  width: 600px;
+  height: 100px;
+  margin: 0px auto;
+}
