@@ -14,7 +14,7 @@ div {
 
 #wrap #btn_wrap {
   width: 1600px;
-  height: 400px;
+  height: 450px;
   margin: 0px auto;
 }
 
@@ -22,21 +22,35 @@ div {
   background-color: #fff;
 }
 
-#btn_wrap .timer_box {
-  width: 600px;
-  height: 300px;
-  margin: 0px auto;
-}
-
-.timer_box .start {
+#btn_wrap #timer_box {
   width: 300px;
-  height: 150px;
-  margin-top: 70px;
-  margin-left: 150px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 20px auto;
+  align-items: center;
 }
 
-#btn_wrap .text_box {
+#timer_box #click_space {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 300px;
+  display: none;
+}
+
+#timer_box .start {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+#btn_wrap #text_box {
   width: 600px;
   height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 1.4rem;
   margin: 0px auto;
 }
