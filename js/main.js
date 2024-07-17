@@ -20,7 +20,6 @@ click_space.addEventListener("click", stopTimer);
 function setStart() {
   startBtn.style.display = "inline-block";
   click_space.style.display = "none";
-  text_box.style.display = "none";
   ready = false;
 }
 
@@ -67,12 +66,12 @@ function stopTimer() {
   stopTime = new Date();
 
   response = stopTime - startTime;
-  console.log(response);
-
   var text = document.createTextNode("당신의 반응속도 : " + response + "ms");
+  text_box.appendChild(text);
   text_box.style.display = "block";
+
   click_space.onclick = function () {
+    text_box.style.display = "none";
     location.href = "main.html";
   };
-  text_box.appendChild(text);
 }

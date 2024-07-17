@@ -1,19 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-div {
-  border: 1px solid black;
+  border: none;
 }
 
 #wrap {
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
 }
 
 #wrap #btn_wrap {
-  width: 1600px;
+  width: 100%;
   height: 450px;
   margin: 0px auto;
 }
@@ -43,7 +40,32 @@ div {
 #timer_box .start {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  border-radius: 150px;
+  text-align: center;
+  transition: top 0.01s linear;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.start.cyan {
+  background-color: #7fccde;
+  box-shadow: 0 0 0 1px #7fccde inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 8px 0 0 rgba(102, 164, 178, 0.6), 0 8px 0 1px rgba(0, 0, 0, 0.4),
+    0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+.start.cyan:active {
+  box-shadow: 0 0 0 1px #7fccde inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.start.cyan:hover {
+  background-color: #82d1e3;
+}
+
+.start:active {
+  top: 9px;
 }
 
 #btn_wrap #text_box {
@@ -53,4 +75,14 @@ div {
   line-height: 100px;
   font-size: 1.4rem;
   margin: 0px auto;
+}
+
+#score_wrap {
+  width: 100%;
+  min-height: 800px;
+}
+
+#score_wrap .table {
+  width: 100%;
+  height: 100%;
 }
