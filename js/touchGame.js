@@ -5,13 +5,28 @@ let start = document.getElementById("start");
 let timeP = document.getElementById("time");
 let scoreP = document.getElementById("score");
 
+let universe = [
+  "sun",
+  "moon",
+  "mercury",
+  "venus",
+  "earth",
+  "mars",
+  "jupiter",
+  "saturn",
+];
+
 let noteInv;
 let timeInv;
 
 let score = 0;
 let timer = 30;
+
+//노트 관련 변수들
 let x;
 let y;
+let radius;
+let index;
 
 start.addEventListener("click", setStart);
 
@@ -23,14 +38,20 @@ function setStart() {
 }
 
 function startGame() {
-  noteInv = setInterval(randomNote, 1000);
+  note.addEventListener("click", getScore);
+  noteInv = setInterval(randomNote, 800);
   timeInv = setInterval(runTime, 1000);
+}
 
-  note.onclick = function () {
-    score++;
-    scoreP.innerText = score;
-    note.style.display = "none";
-  };
+function getScore() {
+  if (index >= 0 && index <= 2) {
+    score += 1;
+  } else if (index >= 3 && index <= 5) {
+    score += 2;
+  } else score += 3;
+
+  scoreP.innerText = score;
+  note.style.display = "none";
 }
 
 function stopGame() {
@@ -51,8 +72,13 @@ function runTime() {
 function randomNote() {
   x = Math.floor(Math.random() * 1200 + 80);
   y = Math.floor(Math.random() * 600 + 80);
+  radius = Math.floor(Math.random() * 100) + 50;
+  index = Math.floor(Math.random() * 8);
   note.style.top = y + "px";
   note.style.left = x + "px";
+  note.style.width = radius + "px";
+  note.style.height = radius + "px";
   note.style.display = "block";
-  console.log(score);
+  note.className = universe[index];
+  console.log(index);
 }

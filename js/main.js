@@ -58,7 +58,7 @@ function stratTimer() {
 function stopTimer() {
   if (ready == false) {
     alert("아직 준비되지 않았습니다. 다시 시작해주세요");
-    location.href = "main.html";
+    setStart();
   }
   timer_box.style.backgroundColor = "red";
   click_space.innerText = "측정종료";
@@ -71,7 +71,7 @@ function stopTimer() {
   text_box.style.display = "block";
 
   click_space.onclick = function () {
-    text_box.style.display = "none";
+    text_box.innerText = "";
     location.href = "main.html";
   };
 }

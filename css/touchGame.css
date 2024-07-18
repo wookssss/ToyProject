@@ -44,9 +44,7 @@ div {
   display: none;
   width: 70px;
   height: 70px;
-  border: 1px solid white;
   border-radius: 50%;
-  background-color: white;
   top: 0;
   left: 0;
 }
@@ -55,6 +53,42 @@ div {
   position: relative;
   width: 200px;
   height: 100px;
+  border-radius: 15px;
   top: 350px;
   left: 45%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.788);
+  background-color: white;
+
+#screen .sun {
+  background-color: red;
+}
+
+#screen .moon {
+  background-color: gray;
+}
+
+#screen .mercury {
+  background-color: rgb(0, 110, 255);
+}
+
+#screen .venus {
+  background-color: goldenrod;
+}
+
+#screen .earth {
+  background-color: green;
+}
+
+#screen .mars {
+  background-color: orangered;
+}
+
+#screen .jupiter {
+  background-color: violet;
+}
+
+#screen .saturn {
+  background-color: aquamarine;
 }
