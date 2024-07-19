@@ -1,3 +1,4 @@
+//ID로 문서를 가져오는 변수
 let screen = document.getElementById("screen");
 let note = document.getElementById("note");
 let start = document.getElementById("start");
@@ -5,9 +6,10 @@ let start = document.getElementById("start");
 let timeP = document.getElementById("time");
 let scoreP = document.getElementById("score");
 
+//노트의 클래스 이름 설정용 배열
 let universe = [
-  "sun",
   "moon",
+  "sun",
   "mercury",
   "venus",
   "earth",
@@ -44,9 +46,12 @@ function startGame() {
 }
 
 function getScore() {
-  if (index >= 0 && index <= 2) {
+  if (index == 0) {
+    //달을 클릭하면 마이너스 점수
+    if (score != 0) score -= 1;
+  } else if (index >= 1 && index <= 3) {
     score += 1;
-  } else if (index >= 3 && index <= 5) {
+  } else if (index >= 4 && index <= 5) {
     score += 2;
   } else score += 3;
 
@@ -70,10 +75,13 @@ function runTime() {
 }
 
 function randomNote() {
-  x = Math.floor(Math.random() * 1200 + 80);
-  y = Math.floor(Math.random() * 600 + 80);
+  //좌표, 크기, 클래스 설정
+  x = Math.floor(Math.random() * 1100 + 50);
+  y = Math.floor(Math.random() * 500 + 50);
   radius = Math.floor(Math.random() * 100) + 50;
   index = Math.floor(Math.random() * 8);
+
+  //note 영역에 반영
   note.style.top = y + "px";
   note.style.left = x + "px";
   note.style.width = radius + "px";
